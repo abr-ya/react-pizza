@@ -10,6 +10,8 @@ import Inst from '../components/Inst/Inst';
 import {IHome, IProduct} from '../interfaces';
 import styles from './pages.module.scss';
 
+// демо-данные напрямую
+import data from '../data';
 
 export const Home = ({
 	setSort, setSize, addToCart, delFromCart,
@@ -71,7 +73,7 @@ export const Home = ({
 						<Header />
 					</div>
 				</div>
-				<Sales />	
+				<Sales sales={data.sales} />	
 				<div className='row'>
 					<div className='col-md-12'>
 						<Filter size={size} sort={sort} handlers={filterHandlers} count={sortedProducts.length} />

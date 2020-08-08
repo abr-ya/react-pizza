@@ -24,6 +24,13 @@ export interface IHome {
 	cart: any;
 }
 
+export interface ISale {
+	id: number;
+	title: string;
+	image: string;
+	text: string;
+}
+
 export interface IProduct {
 	id: number;
 	title: string;
@@ -32,6 +39,15 @@ export interface IProduct {
 	category: string[];
 	price: number;
 	sku: string;
+}
+
+export interface IData {
+	pizza: IProduct[];
+	sales: ISale[];
+}
+
+export interface ISales {
+	sales: ISale[];
 }
 
 export interface IProducts {

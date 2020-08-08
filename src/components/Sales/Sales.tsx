@@ -1,20 +1,19 @@
 import React from 'react';
 import styles from './sales.module.scss';
-import img1 from './event-1.jpg';
-import img2 from './event-2.jpg';
-import img3 from './event-3.jpg';
+import {ISales} from '../../interfaces';
 
-const Sales = () => (
+const Sales = ({sales}: ISales) => (
 	<div className={`row ${styles.sales}`}>
-		<div className="col-md-4">
-			<img src={img1} alt='img1' />
-		</div>
-		<div className="col-md-4">
-			<img src={img2} alt='img2' />
-		</div>
-		<div className="col-md-4">
-			<img src={img3} alt='img3' />
-		</div>
+		{(Array.isArray(sales) && sales.length)
+			? sales.map(item => (
+				<div className="col-md-4" key={item.id}>
+					<img src={`/sales/${item.image}`} alt={item.title} />
+					<h3>{item.title}</h3>
+					<p>{item.text}</p>
+				</div>				
+			))
+			: null
+		}
 	</div>
 );
 
