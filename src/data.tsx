@@ -16,7 +16,7 @@ const data: IData = {
 			'title': 'Маргарита',
 			'image': 'pizza-02.png',
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
-			'category': ['meaty', 'cheese'],
+			'category': ['meaty', 'cheese', 'spicy'],
 			'price': 699,
 			'sku': '18644119330491312'
 		},
@@ -25,7 +25,7 @@ const data: IData = {
 			'title': 'Барбекю',
 			'image': 'pizza-03.png',
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
-			'category': ['meaty', 'cheese'],
+			'category': ['meaty', 'cheese', 'spicy'],
 			'price': 699,
 			'sku': '18644119330491312'
 		},
@@ -34,7 +34,7 @@ const data: IData = {
 			'title': 'Вегетарианская',
 			'image': 'pizza-04.png',
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
-			'category': ['meaty', 'cheese'],
+			'category': ['cheese', 'vegan'],
 			'price': 699,
 			'sku': '18644119330491312'
 		}
@@ -47,13 +47,13 @@ const data: IData = {
 			'text': 'При заказе 2-х больших пицц - средняя пицца в подарок',			
 		},
 		{
-			'id': 1,
+			'id': 2,
 			'title': 'Напиток в подарок',
 			'image': 'event-2.jpg',
 			'text': 'Скидка на заказ от 3000 рублей + напиток в подарок',			
 		},
 		{
-			'id': 1,
+			'id': 3,
 			'title': '25% при первом заказе',
 			'image': 'event-3.jpg',
 			'text': 'Скидка новым клиентам!',			

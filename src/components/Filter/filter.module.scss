@@ -1,3 +1,21 @@
 .filter {
     min-height: 120px;
+    margin-bottom: 40px;
+}
+
+.wrapper {
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+
+.filterItem {
+    font-size: 18px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.active {
+    color: #e52d2d;
 }

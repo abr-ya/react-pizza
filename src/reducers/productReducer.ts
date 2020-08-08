@@ -14,7 +14,7 @@ const initialState: productState = {
 	loading: false,
 	products: [],
 	sort: '',
-	size: '',
+	size: 'all',
 	cart: {2: 1, 3: 2},
 };
 

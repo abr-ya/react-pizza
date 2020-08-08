@@ -17,7 +17,8 @@ export const Home = ({
 	setSort, setSize, addToCart, delFromCart,
 	products, sort, size, cart,
 }: IHome) => {
-	const filteredProducts: IProduct[] = size ? products.filter(item => (item.availableSizes.includes(size))) : products;
+	const filteredProducts: IProduct[] = (size && size !== 'all') ? products
+		.filter(item => (item.category.includes(size))) : products;
 	//console.log('filtered:', filteredProducts);
 
 	// tslint:disable-next-line: no-shadowed-variable
