@@ -1,0 +1,19 @@
+.navbarNav {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: row;
+	width: 100%;
+}
+
+.navbarNav li {
+	font-family: Alegreya;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+
+.navbarNav li a {
+	color: #000;
+}

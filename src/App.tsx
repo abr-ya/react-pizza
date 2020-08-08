@@ -6,7 +6,7 @@ import Loader from './components/Loader/Loader';
 import {Home} from './pages/Home';
 import {About} from './pages/About';
 import New from './pages/New';
-import Cart from './pages/Cart';
+import Contact from './pages/Contact';
 import Footer from './components/Footer/Footer';
 
 const App = ({
@@ -23,15 +23,22 @@ const App = ({
 	const title = 'React Pizza Shop App';
 	const links = [
 		{link: '/', name: 'Меню', exact: true},
-		{link: '/about', name: 'About', exact: true},
-		{link: '/cart', name: 'Корзина', exact: true},
-		{link: '/new', name: 'Новая', exact: true},
+		{link: '/about', name: 'О нас', exact: true},
+		{link: '/contact', name: 'Контакты', exact: true},
+		// {link: '/new', name: 'Новая', exact: true},
 	];
 
 	return (
 		<BrowserRouter basename='/demo/pizza/'>
-			<div className='container'>
-				<Nav title={title} links={links} />
+			<div className='container navHeader'>
+				<div className='row'>
+					<div className='col-md-6'>
+						<Nav title={title} links={links} />
+					</div>
+					<div className='col-md-6'>
+						Контакты, Корзина, язык
+					</div>
+				</div>
 			</div>
 			{loading
 				? (
@@ -58,7 +65,7 @@ const App = ({
 						/>
 						<Route path='/about' component={About} />
 						<Route path='/new' component={New} />
-						<Route path='/cart' component={Cart} />
+						<Route path='/contact' component={Contact} />
 						<Redirect to='/' />
 					</Switch>
 				)

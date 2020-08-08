@@ -1,6 +1,6 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
-import './Nav.scss';
+import styles from './nav.module.scss';
 
 interface INav {
     title: string;
@@ -14,6 +14,7 @@ interface ILink {
 }
 
 const Nav = ({title, links}: INav) => {
+    // title - заголовок
     let htmlLinks: any[] = [];
     if (Array.isArray(links) && links.length) {
         htmlLinks = links.map((item, index) => (
@@ -24,9 +25,13 @@ const Nav = ({title, links}: INav) => {
     }
 
     return (
-        <nav className="navbar navbar-dark bg-primary navbar-expand-lg">
-            <div className="navbar-brand">{title}</div>
-            <ul className="navbar-nav">{htmlLinks}</ul>
+        <nav className="navbar navbar-expand-lg">
+            <div className="navbar-brand">
+                <img src="/img/logo.png" alt="logo"/>
+            </div>
+            <ul className={`navbar-nav ${styles.navbarNav}`}>
+                {htmlLinks}
+            </ul>
         </nav>
     );
 }

@@ -47,7 +47,7 @@ export const Home = ({
 	}
 
 	const handleAddToCart = (id: number) => {
-		console.log('handleAddToCart', id);
+		//console.log('handleAddToCart', id);
 		addToCart(id);
 	};
 
@@ -68,12 +68,8 @@ export const Home = ({
 
 	return (
 		<>
+			<Header />{/* fluid */}
 			<div className='container'>
-				<div className='row'>
-					<div className='col-md-12'>
-						<Header />
-					</div>
-				</div>
 				<Sales sales={data.sales} />	
 				<div className='row'>
 					<div className='col-md-12'>
