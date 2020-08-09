@@ -1,4 +1,28 @@
 .delivery {
 	background-color:#f8f6f3;
-	height: 200px; // 540
+	min-height: 144px; // 540
+}
+
+.wrapper {
+	background-color: #fff;
+	background-clip: content-box;
+	margin-top: 20px;
+	margin-bottom: 80px;		
+}
+
+.card {
+	display: flex;
+	flex-direction: row;
+	min-height: 144px;
+	padding: 35px 25px;
+}
+
+.left {
+	width: 70px;
+	height: 70px;
+	margin-right: 25px;
+}
+
+.right h3 {
+	margin-top: 0;
 }

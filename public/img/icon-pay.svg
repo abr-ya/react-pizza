@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="64" height="65" viewBox="0 0 64 65">
+    <g fill="none" fill-rule="evenodd" transform="translate(1 1)">
+        <circle cx="9" cy="37" r="2" fill="#000"/>
+        <circle cx="18" cy="37" r="2" fill="#000"/>
+        <circle cx="27" cy="37" r="2" fill="#000"/>
+        <circle cx="9" cy="45" r="2" fill="#000"/>
+        <circle cx="18" cy="45" r="2" fill="#000"/>
+        <circle cx="27" cy="45" r="2" fill="#000"/>
+        <circle cx="9" cy="53" r="2" fill="#000"/>
+        <circle cx="18" cy="53" r="2" fill="#000"/>
+        <circle cx="27" cy="53" r="2" fill="#000"/>
+        <path stroke="#000" stroke-width="2" d="M26 8h6c2.21 0 4 1.79 4 4v47c0 2.21-1.79 4-4 4H4c-2.21 0-4-1.79-4-4V12c0-2.21 1.79-4 4-4h6M36 13h2c1.105 0 2 .895 2 2v28c0 1.105-.895 2-2 2h-2 0V13zM40 16h19c1.657 0 3 1.343 3 3v20c0 1.657-1.343 3-3 3H40h0V16z"/>
+        <path stroke="#000" stroke-width="2" d="M40 21H62V27H40z"/>
+        <path stroke="#E52D2D" stroke-linejoin="round" stroke-width="2" d="M10 0H26V12H10z"/>
+        <path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M29 12L7 12"/>
+        <rect width="26" height="11" x="5" y="17" stroke="#000" stroke-width="2" rx="1"/>
+    </g>
+</svg>
