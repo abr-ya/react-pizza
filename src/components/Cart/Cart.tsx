@@ -16,37 +16,41 @@ const Cart = ({products, cartItems, handleRemoveFromCart}: ICart) => {
 		for (const key in cartItems) {cartItemsArr.push([key, cartItems[key]]);}
 	}
 	let sum = 0;
+	const sizes = {S: '20см', M: '30см', L: '40см'}
 
 	return (
 		<div className={`cart ${styles.cart}`}>
 			<div className='alert alert-info'>
 				{Object.keys(cartItems).length === 0
 					? 'Ничего не выбрано...' :
-					<div>You have {Object.keys(cartItems).length} items in the basket:</div>
+					<div>Вы выбрали {Object.keys(cartItems).length} пицц(а,ы):</div>
 				}
 				{Object.keys(cartItems).length > 0 && (
 					<ul>
 						{cartItemsArr.map(item => {
-							const product = products.find(prod => prod.id.toString() === item[0]);
-							const total = product ? product.price * item[1] : 0;
+							const pId = item[0].slice(1); // всё, кроме первого - id
+							const pSize: 'S' | 'M' | 'L' = item[0].slice(0,1);
+							const pQuantity = item[1];
+							const product = products.find(prod => prod.id.toString() === pId);
+							const total = product ? product.price2[pSize] * pQuantity : 0;
 							sum += total;
 
 							return (
-								<li key={item[0]}>
+								<li key={`${pId}_${pSize}`}>
 									<button
 										className={`btn btn-danger btn-xs ${styles.btn}`}
-										onClick={() =>handleRemoveFromCart(item[0])}
+										onClick={() => handleRemoveFromCart(`${pSize}${pId}`)}
 									>
 										x
 									</button>
-									{product ? product.title : null } &nbsp;
-									{product ? product.price : null } x {item[1]} = {total}
+									{product ? `${product.title} (${sizes[pSize]})` : null } &nbsp;
+									{product ? product.price2[pSize] : null } x {pQuantity} = {total}
 								</li>
 							);
 						})}
 					</ul>
 				)}
-				<hr/><b>total: {utils.formatCurrency(sum)}</b>
+				<hr/><b>на сумму: {utils.formatCurrency(sum)}</b>
 			</div>
 		</div>
 	);

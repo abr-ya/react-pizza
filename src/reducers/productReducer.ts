@@ -15,7 +15,7 @@ const initialState: productState = {
 	products: [],
 	sort: '',
 	size: 'all',
-	cart: {2: 1, 3: 2},
+	cart: {M2: 1, S3: 2},
 };
 
 export type productActions = ActionType<typeof actions>;

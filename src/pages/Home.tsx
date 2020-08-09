@@ -46,12 +46,12 @@ export const Home = ({
 		sortedProducts = sortProductsPriceDown(filteredProducts);
 	}
 
-	const handleAddToCart = (id: number) => {
+	const handleAddToCart = (id: string) => {
 		//console.log('handleAddToCart', id);
 		addToCart(id);
 	};
 
-	const handleRemoveFromCart = (id: number) => {
+	const handleRemoveFromCart = (id: string) => {
 		//console.log('handleRemoveFromCart', id);
 		delFromCart(id);
 	};

@@ -4,8 +4,8 @@ export interface IApp {
 	requestProductsSaga: () => void;
 	setSort: (text: string) => void;
 	setSize: (text: string) => void;
-	addToCart: (id: number) => void;
-	delFromCart: (id: number) => void;
+	addToCart: (id: string) => void;
+	delFromCart: (id: string) => void;
 	loading: boolean;
 	products: any[];
 	sort: string;
@@ -16,8 +16,8 @@ export interface IApp {
 export interface IHome {
 	setSort: (text: string) => void;
 	setSize: (text: string) => void;
-	addToCart: (id: number) => void;
-	delFromCart: (id: number) => void;
+	addToCart: (id: string) => void;
+	delFromCart: (id: string) => void;
 	products: any[];
 	sort: string;
 	size: string;
@@ -53,12 +53,12 @@ export interface ISales {
 
 export interface IProducts {
 	data: IProduct[];
-	handleAddToCart(id: number): void;
+	handleAddToCart(id: string): void;
 }
 
 export interface IPizza {
 	data: IProduct;
-	handleAddToCart(id: number): void;
+	handleAddToCart(id: string): void;
 }
 
 export interface ISizeSetter {
@@ -79,5 +79,5 @@ export interface IFilter {
 export interface ICart {
 	products: IProduct[];
 	cartItems: any;
-	handleRemoveFromCart(id: number): void;
+	handleRemoveFromCart(id: string): void;
 }

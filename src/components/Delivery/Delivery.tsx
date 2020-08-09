@@ -37,7 +37,7 @@ const Delivery = () => {
 				</div>
 				<div className='row'>
 					{DeliveryData.map((item: IDeliveryCard) => (
-						<div className={`col-md-4 ${styles.wrapper}`}>
+						<div className={`col-md-4 ${styles.wrapper}`} key={item.image}>
 							<div className={styles.card}>
 								<div className={styles.left}>
 									<img src={`img/${item.image}`} alt="icon-order"/>
