@@ -27,7 +27,7 @@ const Nav = ({title, links}: INav) => {
     return (
         <nav className="navbar navbar-expand-lg">
             <div className="navbar-brand">
-                <img src="/img/logo.png" alt="logo"/>
+                <img src="img/logo.png" alt="logo"/>
             </div>
             <ul className={`navbar-nav ${styles.navbarNav}`}>
                 {htmlLinks}

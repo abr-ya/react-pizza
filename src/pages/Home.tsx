@@ -1,5 +1,5 @@
 import React from 'react';
-import Header from '../components/Header/Header';
+import Banner from '../components/Banner/Banner';
 import Sales from '../components/Sales/Sales';
 import Products from '../components/Products/Products';
 import Filter from '../components/Filter/Filter';
@@ -68,7 +68,7 @@ export const Home = ({
 
 	return (
 		<>
-			<Header />{/* fluid */}
+			<Banner />{/* fluid */}
 			<div className='container'>
 				<Sales sales={data.sales} />	
 				<div className='row'>

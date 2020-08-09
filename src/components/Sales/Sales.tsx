@@ -7,7 +7,7 @@ const Sales = ({sales}: ISales) => (
 		{(Array.isArray(sales) && sales.length)
 			? sales.map(item => (
 				<div className="col-md-4" key={item.id}>
-					<img src={`/sales/${item.image}`} alt={item.title} />
+					<img src={`sales/${item.image}`} alt={item.title} />
 					<h3>{item.title}</h3>
 					<p>{item.text}</p>
 				</div>				

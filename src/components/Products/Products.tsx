@@ -7,7 +7,7 @@ const Products = ({data, handleAddToCart}: IProducts) => {
 	const productsHtml = data.map(item => (
 		<div className='col-md-3' key={item.id}>
 			<div className={`card ${styles.card} text-center mb-3`}>
-				<img src={`/products/${item.image}`} alt={item.title} />
+				<img src={`products/${item.image}`} alt={item.title} />
 				<div className='card-body'>
 					<p>{item.title}</p>
 					<b>{utils.formatCurrency(item.price)}</b>

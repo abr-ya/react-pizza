@@ -1,16 +1,16 @@
 .bg {
-	background-image: url('/img/img-bg.png');
+	background-image: url('./img/img-bg.jpg');
 	background-position: right;
 	background-repeat: no-repeat;
 }
 
-.header {
+.banner {
 	height: 520px;
 	margin-top: 40px;
 	margin-bottom: 40px;
 }
 
-.headerRight {
+.bannerRight {
 	position: relative;
 }
 
@@ -27,11 +27,11 @@
 	left: -50px;
 }
 
-.header h1 {
+.banner h1 {
 	margin-top: 117px;
 }
 
-.header p {
+.banner p {
 	font-family: Roboto;
 	font-size: 24px;
 	font-weight: normal;
