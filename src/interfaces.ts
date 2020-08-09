@@ -38,7 +38,8 @@ export interface IProduct {
 	description: string;
 	category: string[];
 	price: number;
-	sku: string;
+	price2: {[key: string]: number};
+	defaultSize: 'S' | 'M' | 'L';
 }
 
 export interface IData {
@@ -53,6 +54,16 @@ export interface ISales {
 export interface IProducts {
 	data: IProduct[];
 	handleAddToCart(id: number): void;
+}
+
+export interface IPizza {
+	data: IProduct;
+	handleAddToCart(id: number): void;
+}
+
+export interface ISizeSetter {
+	start: string;
+	setter(size: 'S' | 'M' | 'L'): void;
 }
 
 export interface IFilter {

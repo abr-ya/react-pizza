@@ -9,16 +9,18 @@ const data: IData = {
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
 			'category': ['meaty', 'cheese'],
 			'price': 699,
-			'sku': '18644119330491312'
+			'price2': {S: 299, M: 399, L: 499},
+			'defaultSize': 'M',
 		},
 		{
 			'id': 2,
 			'title': 'Маргарита',
 			'image': 'pizza-02.png',
-			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
+			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик. Длинное описание. Вот прямо очень длинное. И оливочка',
 			'category': ['meaty', 'cheese', 'spicy'],
 			'price': 699,
-			'sku': '18644119330491312'
+			'price2': {S: 295, M: 395, L: 495},
+			'defaultSize': 'M',
 		},
 		{
 			'id': 3,
@@ -27,7 +29,8 @@ const data: IData = {
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
 			'category': ['meaty', 'cheese', 'spicy'],
 			'price': 699,
-			'sku': '18644119330491312'
+			'price2': {S: 399, M: 499, L: 599},
+			'defaultSize': 'L',
 		},
 		{
 			'id': 4,
@@ -36,7 +39,8 @@ const data: IData = {
 			'description': 'Томат, шампиньон, сыр, оливки, чили, соус, тесто, базилик',
 			'category': ['cheese', 'vegan'],
 			'price': 699,
-			'sku': '18644119330491312'
+			'price2': {S: 299, M: 399, L: 499},
+			'defaultSize': 'M',
 		}
 	],
 	'sales' : [

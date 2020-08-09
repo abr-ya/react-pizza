@@ -40,7 +40,7 @@ const Cart = ({products, cartItems, handleRemoveFromCart}: ICart) => {
 										x
 									</button>
 									{product ? product.title : null } &nbsp;
-									{product ? product.price : null } x {item[1]} = ${total}
+									{product ? product.price : null } x {item[1]} = {total}
 								</li>
 							);
 						})}

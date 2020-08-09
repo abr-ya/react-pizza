@@ -1,0 +1,113 @@
+.pizza {
+	display: block;
+	height: 540px;
+	border-radius: 5px;
+	border: 0;
+	box-shadow: 0 2px 5px 0 rgba(165, 169, 176, 0.3);
+	text-align: center;
+	padding-top: 28px;
+}
+
+$pizzaPadding: 12px;
+
+.pizzaBlock {
+	position: relative;
+	height: 224px;
+	width: 224px;
+	//padding: $pizzaPadding;
+	margin: 0 auto;
+}
+
+.pizzaImg {
+	position: absolute;
+	//background-color: gainsboro;
+	top: 0;
+	left: 0;
+	//z-index: 20;
+}
+
+.pizzaImgL {
+	padding: 2px;
+}
+
+.pizzaImgM {
+	padding: 12px;
+}
+
+.pizzaImgS {
+	padding: 25px;
+}
+
+.pizzaImg img {
+	width: 100%;
+	height: 100%;
+}
+
+.circle1, .circle2, .circle3 {
+	position: absolute;
+	border-radius: 50%;
+	border: 1px dashed #dcdfe2;	
+	z-index: 10;
+}
+
+.circle1 {
+	height: 200px;
+	width: 200px;
+	top: $pizzaPadding + 0px;
+	left: $pizzaPadding + 0px;
+}
+
+.circle2 {
+	height: 180px;
+	width: 180px;
+	top: $pizzaPadding + 10px;
+	left: $pizzaPadding + 10px;
+}
+
+.circle3 {
+	height: 160px;
+	width: 160px;
+	top: $pizzaPadding + 20px;
+	left: $pizzaPadding + 20px;
+}
+
+.textBlock {
+	padding: 0 20px;
+}
+
+.textBlock h3 {
+	margin-top: 5px;
+}
+
+.price {
+	font-size: 24px;
+	font-weight: bold;
+	line-height: 1.25;
+	display: block;
+	margin-bottom: 10px;
+}
+
+.ingredients {
+	font-size: 12px;
+	font-weight: normal;
+	line-height: 1.5;
+	letter-spacing: normal;
+	text-align: center;
+	color: #848a9a;
+}
+
+.btn {
+	width: 200px;
+	height: 52px;
+	border-radius: 5px;
+	// background-color: #e52d2d;
+}
+
+.btn span {
+	font-family: Alegreya;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 900;
+	letter-spacing: 1px;
+	color: #ffffff;
+}
