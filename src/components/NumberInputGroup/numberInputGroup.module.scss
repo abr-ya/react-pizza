@@ -7,6 +7,19 @@
 	border-radius: 4px;
 }
 
+.numberInputGroup input[type="number"]::-webkit-outer-spin-button,
+.numberInputGroup input[type="number"]::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+.numberInputGroup input[type="number"] {
+	-moz-appearance: textfield;
+}
+.numberInputGroup input[type="number"]:hover,
+.numberInputGroup input[type="number"]:focus {
+	-moz-appearance: number-input;
+}
+
 .button {
 	min-width: 20px;
 	padding: 2px 3px;
@@ -35,6 +48,7 @@
 
 .input {
 	width: 62px;
+	height: 30px;
 	text-align: center;
 	border: 1px solid gainsboro;
 }

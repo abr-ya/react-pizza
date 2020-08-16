@@ -3,7 +3,11 @@ import styles from './header.module.scss';
 import Nav from '../Nav/Nav';
 import HeaderRight from '../HeaderRight/HeaderRight';
 
-const Header = () => {
+interface IHeader {
+	inCart: number;
+}
+
+const Header = ({inCart}: IHeader) => {
 	const links = [
 		{link: '/', name: 'Меню', exact: true},
 		{link: '/about', name: 'О нас', exact: true},
@@ -17,7 +21,7 @@ const Header = () => {
 					<Nav links={links} />
 				</div>
 				<div className='col-md-6'>
-					<HeaderRight />
+					<HeaderRight inCart={inCart} />
 				</div>
 			</div>
 		</div>

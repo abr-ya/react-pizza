@@ -6,6 +6,7 @@ export interface IApp {
 	setSize: (text: string) => void;
 	addToCart: (id: string) => void;
 	delFromCart: (id: string) => void;
+	updateCart: (id: string, quantity: number) => void;
 	loading: boolean;
 	products: any[];
 	sort: string;
@@ -18,6 +19,7 @@ export interface IHome {
 	setSize: (text: string) => void;
 	addToCart: (id: string) => void;
 	delFromCart: (id: string) => void;
+	updateCart: (id: string, quantity: number) => void;
 	products: any[];
 	sort: string;
 	size: string;
@@ -80,4 +82,5 @@ export interface ICart {
 	products: IProduct[];
 	cartItems: any;
 	handleRemoveFromCart(id: string): void;
+	updateCart: (id: string, quantity: number) => void;
 }

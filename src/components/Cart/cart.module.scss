@@ -2,6 +2,11 @@
 	width: 100%;
 }
 
+.cart button:focus,
+.cart input:focus {
+	outline: none;
+}
+
 .cart hr {
 	border-top: 1px solid black;
 	margin: 10px;
@@ -23,6 +28,8 @@
 
 .image {
 	width: 120px;
+	height: 120px;
+	position: relative;
 	//background-color: gainsboro;
 }
 
@@ -42,6 +49,12 @@
 	position: relative;
 }
 
+.price span {
+	font-family: Alegreya;
+	font-size: 24px;
+	font-weight: 800;
+}
+
 .del {
 	position: absolute;
 	top: 0;
@@ -49,4 +62,75 @@
 	padding: 2px;
 	margin-right: 4px;
 	line-height: 0.8;
+}
+
+
+$pizzaPadding: 10px;
+
+.pizzaImg {
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.pizzaImgL {
+	padding: 5px;
+}
+
+.pizzaImgM {
+	padding: 15px;
+}
+
+.pizzaImgS {
+	padding: 25px;
+}
+
+.pizzaImg img {
+	width: 100%;
+	height: 100%;
+}
+
+.circle1, .circle2, .circle3 {
+	position: absolute;
+	border-radius: 50%;
+	border: 1px dashed #dcdfe2;	
+	z-index: 10;
+}
+
+.circle1 {
+	height: 100px;
+	width: 100px;
+	top: $pizzaPadding + 0px;
+	left: $pizzaPadding + 0px;
+}
+
+.circle2 {
+	height: 80px;
+	width: 80px;
+	top: $pizzaPadding + 10px;
+	left: $pizzaPadding + 10px;
+}
+
+.circle3 {
+	height: 60px;
+	width: 60px;
+	top: $pizzaPadding + 20px;
+	left: $pizzaPadding + 20px;
+}
+
+
+.summa {
+	text-align: end;
+	margin-top: 20px;
+	font-family: Alegreya;
+	font-weight: 800;
+}
+
+.summaText {
+	font-size: 18px;
+	margin-right: 20px;
+}
+
+.summaValue {
+	font-size: 32px;
 }

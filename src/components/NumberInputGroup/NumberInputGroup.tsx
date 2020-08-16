@@ -3,26 +3,23 @@ import styles from './numberInputGroup.module.scss';
 import Sign from './Sign';
 
 interface INumberInputGroup {
+	id: string;
 	numberValue: number; // значение "сверху"
 	multiplicity?: number; // кратность, может сделать обязательной?
-	minusClickHandler: () => void;
-	plusClickHandler: () => void;
-	saveInputHandler?: (val: number) => void; // действия "значение вверх"
+	saveInputHandler: (id: string, quantity: number) => void; // действия "значение вверх"
 	max?: number;
 	onCartInputToggle?: (active: boolean) => void;
 }
 
 const NumberInputGroup = ({
+	id,
 	numberValue,
 	multiplicity,
-	minusClickHandler,
-	plusClickHandler,
 	max,
 	saveInputHandler,
 	onCartInputToggle,
 }: INumberInputGroup) => {
 	const [isActive, setIsActive] = useState(false);
-	// поменял условный оператор на \\
 	const [inputValue, setInputValue] = useState(numberValue || 0);
 
 	useEffect(() => {
@@ -31,7 +28,7 @@ const NumberInputGroup = ({
 
 	// разбираем ошибки
 	const maxError = max && inputValue > max;
-	const minError = inputValue < 0;
+	const minError = inputValue < 1;
 	//const multError = inputValue % (multiplicity || 1) !== 0;
 	//const valueError = maxError || minError || multError;
 
@@ -55,7 +52,7 @@ const NumberInputGroup = ({
 					const message = `Исправлено на ${newValue}`;
 					console.log('warning:', message);
 				}
-				if (saveInputHandler) saveInputHandler(newValue);
+				saveInputHandler(id, newValue);
 			}
 		}
 	};
@@ -70,8 +67,8 @@ const NumberInputGroup = ({
 			<span>
 				<button
 					className={styles.button}
-					onClick={minusClickHandler}
-					disabled={numberValue <= 0}
+					onClick={() => saveInputHandler(id, inputValue - 1)}
+					disabled={numberValue <= 1}
 					title={`- ${multiplicity}`}
 				>
 					<Sign sign="minus" />
@@ -112,7 +109,7 @@ const NumberInputGroup = ({
 			<span>
 				<button
 					className={styles.button}
-					onClick={plusClickHandler}
+					onClick={() => saveInputHandler(id, inputValue + 1)}
 					disabled={!!max && max <= numberValue}
 					title={`+ ${multiplicity}`}
 				>

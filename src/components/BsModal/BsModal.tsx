@@ -5,7 +5,6 @@ interface IBsModal {
 	id: string;
     children: any;
     title?: string;
-    //exact: boolean;
 }
 
 const BsModal = ({id, children, title}: IBsModal) => (

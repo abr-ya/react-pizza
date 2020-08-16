@@ -21,3 +21,6 @@ export const addToCart = createCustomAction(productActionTypes.ADD_TO_CART,
 export const delFromCart = createCustomAction(productActionTypes.DEL_FROM_CART,
 	(id: string) => ({id}),
 );
+export const updateCart = createCustomAction(productActionTypes.UPDATE_CART,
+	(id: string, quantity: number) => ({id, quantity}),
+);

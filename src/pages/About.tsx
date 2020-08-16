@@ -3,16 +3,8 @@ import styles from './pages.module.scss';
 import NumberInputGroup from '../components/NumberInputGroup/NumberInputGroup';
 
 export const About = () => {
-	const minusClickHandler = () => {
-		console.log('minusClickHandler');
-	};
-
-	const plusClickHandler = () => {
-		console.log('plusClickHandler');
-	};
-
-	const saveInputHandler = () => {
-		console.log('saveInputHandler');
+	const saveInputHandler = (id: string, quantity: number) => {
+		console.log('saveInputHandler:', id, quantity);
 	};
 
 	return (
@@ -21,9 +13,8 @@ export const About = () => {
 			<p>Пока что это страница для тестирования компонентов.</p>
 			<h3>NumberInputGroup</h3>
 			<NumberInputGroup
-				numberValue={30} // значение "сверху"
-				minusClickHandler={minusClickHandler}
-				plusClickHandler={plusClickHandler}
+				id='M2'
+				numberValue={30}
 				saveInputHandler={saveInputHandler}
 				max={100}
 				multiplicity={1}

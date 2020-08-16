@@ -15,7 +15,7 @@ const App = ({
 	requestProductsSaga,
 	loading,
 	products, sort, size, cart,
-	setSort, setSize, addToCart, delFromCart,
+	setSort, setSize, addToCart, delFromCart, updateCart,
 }: IApp) => {
 	useEffect(() => {
 		requestProductsSaga();
@@ -31,7 +31,7 @@ const App = ({
 		<BrowserRouter
 			basename={process.env.NODE_ENV === 'development' ? '/' : '/demo/pizza/'}
 		>
-			<Header />
+			<Header inCart={Object.keys(cart).length} />
 			{loading
 				? (
 					<div className={'container'}>
@@ -48,6 +48,7 @@ const App = ({
 									setSize={setSize}
 									addToCart={addToCart}
 									delFromCart={delFromCart}
+									updateCart={updateCart}
 									products={products}
 									sort={sort}
 									size={size}
@@ -64,7 +65,12 @@ const App = ({
 			}
 			<Footer />
 			<BsModal id='bsModal1' title='Ваш заказ'>
-				<Cart products={products} cartItems={cart} handleRemoveFromCart={handleRemoveFromCart} />
+				<Cart
+					products={products}
+					cartItems={cart}
+					handleRemoveFromCart={handleRemoveFromCart}
+					updateCart={updateCart}
+				/>
 			</BsModal>
 		</BrowserRouter>
 	);

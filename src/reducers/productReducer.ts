@@ -66,6 +66,14 @@ export default (
 				...state,
 				cart: {...newCart},
 			};
+		case getType(actions.updateCart):
+			return {
+				...state,
+				cart: {
+					...state.cart,
+					[action.id]: action.quantity,
+				},
+			};
 		default:
 			return state;
 	}

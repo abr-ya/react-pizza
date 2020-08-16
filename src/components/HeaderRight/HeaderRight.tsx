@@ -1,7 +1,11 @@
 import React from 'react';
 import styles from './headerRight.module.scss';
 
-const HeaderRight = () => {
+interface IHeaderRight {
+	inCart: number;
+}
+
+const HeaderRight = ({inCart}: IHeaderRight) => {
 	const cartIconClickHandler = () => {
 		$('#bsModal1').modal('toggle');
 	};
@@ -13,7 +17,7 @@ const HeaderRight = () => {
 			</div>
 			<div className="order">
 				<span onClick={cartIconClickHandler}>
-					Корзина
+					Корзина ({inCart})
 				</span>
 			</div>
 			<div className="lang">
