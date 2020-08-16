@@ -28,7 +28,9 @@ const App = ({
 	};
 
 	return (
-		<BrowserRouter basename='/demo/pizza/'>
+		<BrowserRouter
+			basename={process.env.NODE_ENV === 'development' ? '/' : '/demo/pizza/'}
+		>
 			<Header />
 			{loading
 				? (
@@ -61,7 +63,7 @@ const App = ({
 				)
 			}
 			<Footer />
-			<BsModal title='Ваш заказ'>
+			<BsModal id='bsModal1' title='Ваш заказ'>
 				<Cart products={products} cartItems={cart} handleRemoveFromCart={handleRemoveFromCart} />
 			</BsModal>
 		</BrowserRouter>

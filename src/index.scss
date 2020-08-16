@@ -33,6 +33,22 @@ h3 {
 	margin: 12px 0;
 }
 
+h4 {
+	font-family: Alegreya;
+	font-size: 18px;
+	font-weight: 800;
+	line-height: 1.25;
+	margin: 0;
+}
+
 a.nav-link.active {
 	color: #e52d2d;
 }
+
+.modal-dialog {
+	max-width: 704px;
+}
+
+.modal-header, .modal-body, .modal-footer {
+	padding: 32px;
+} 

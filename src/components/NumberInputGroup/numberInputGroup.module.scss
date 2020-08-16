@@ -1,0 +1,44 @@
+.numberInputGroup {
+	display: flex;
+	align-items: center;
+	position: relative;
+	width: 120px;
+	border: 1px solid gainsboro;
+	border-radius: 4px;
+}
+
+.button {
+	min-width: 20px;
+	padding: 2px 3px;
+	margin-right: 0;
+	color: #262626;
+	border: 1px solid gainsboro;
+}
+
+.pickEditButton {
+	padding: 2px;
+	width: 62px;
+	border-radius: 0;
+	border: 1px solid gainsboro;
+}
+
+.pickEditButton:hover {
+	cursor: text;
+}
+
+.svg {
+	color: #777;
+	fill: currentColor;
+	height: 20px;
+	width: 20px;
+}
+
+.input {
+	width: 62px;
+	text-align: center;
+	border: 1px solid gainsboro;
+}
+
+.inputError {
+	outline: 2px solid red;	
+}

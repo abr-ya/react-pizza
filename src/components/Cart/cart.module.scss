@@ -2,20 +2,50 @@
 	width: 100%;
 }
 
-.cart ul {
-	padding: 0;
-}
-
-.cart li {
-	list-style-type: none;
-}
-
 .cart hr {
 	border-top: 1px solid black;
 	margin: 10px;
 }
 
-.btn {
+.row {
+	display: flex;
+	min-height: 100px;
+	border-bottom: 1px solid #dcdfe2;
+	padding: 11px 0;
+}
+
+.cell {
+	display: flex;
+	flex-direction: column;
+    justify-content: center;
+	align-items: center;	
+}
+
+.image {
+	width: 120px;
+	//background-color: gainsboro;
+}
+
+.pizza {
+	width: 200px;
+	align-items: flex-start;
+	font-size: 12px;
+}
+
+.count {
+	width: 200px;
+	//background-color: gainsboro;
+}
+
+.price {
+	width: 120px;
+	position: relative;
+}
+
+.del {
+	position: absolute;
+	top: 0;
+	right: 0;
 	padding: 2px;
 	margin-right: 4px;
 	line-height: 0.8;

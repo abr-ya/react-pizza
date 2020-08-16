@@ -2,13 +2,14 @@ import React from 'react';
 import styles from './bsModal.module.scss';
 
 interface IBsModal {
+	id: string;
     children: any;
     title?: string;
     //exact: boolean;
 }
 
-const BsModal = ({children, title}: IBsModal) => (
-	<div className={`modal fade ${styles.bsModal}`} id="bsModal1">
+const BsModal = ({id, children, title}: IBsModal) => (
+	<div className={`modal fade ${styles.bsModal}`} id={id}>
 		<div className="modal-dialog modal-dialog-centered">
 			<div className="modal-content">			
 				<div className="modal-header">
