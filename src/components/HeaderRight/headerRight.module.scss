@@ -1,0 +1,32 @@
+.headerRight {
+	background-color:gainsboro;
+	display: flex;
+}
+
+.contact {
+	width: 40%;
+}
+
+.order {
+	width: 40%;
+}
+
+.lang {
+	width: 20%;
+}
+
+.big {
+	font-family: Alegreya;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+
+.small {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: normal;
+	color: #848a9a;
+}

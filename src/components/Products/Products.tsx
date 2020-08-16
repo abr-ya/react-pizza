@@ -5,8 +5,8 @@ import Pizza from '../Pizza/Pizza';
 
 const Products = ({data, handleAddToCart}: IProducts) => {
 	const productsHtml = data.map(item => (
-		<div className='col-md-3' >
-			<Pizza data={item} handleAddToCart={handleAddToCart} key={item.id}/>
+		<div className='col-lg-3 col-md-4 col-sm-12' key={item.id}>
+			<Pizza data={item} handleAddToCart={handleAddToCart} />
 		</div>
 	));
 	//console.log('productsHtml', productsHtml);

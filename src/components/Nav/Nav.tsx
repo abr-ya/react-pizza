@@ -3,8 +3,7 @@ import {NavLink} from 'react-router-dom';
 import styles from './nav.module.scss';
 
 interface INav {
-    title: string;
-    links: ILink[]
+    links: ILink[];
 }
 
 interface ILink {
@@ -13,8 +12,7 @@ interface ILink {
     exact: boolean;
 }
 
-const Nav = ({title, links}: INav) => {
-    // title - заголовок
+const Nav = ({links}: INav) => {
     let htmlLinks: any[] = [];
     if (Array.isArray(links) && links.length) {
         htmlLinks = links.map((item, index) => (

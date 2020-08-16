@@ -3,12 +3,11 @@ import Banner from '../components/Banner/Banner';
 import Sales from '../components/Sales/Sales';
 import Products from '../components/Products/Products';
 import Filter from '../components/Filter/Filter';
-import Cart from '../components/Cart/Cart';
 import Delivery from '../components/Delivery/Delivery';
 import Work from '../components/Work/Work';
 import Inst from '../components/Inst/Inst';
 import {IHome, IProduct} from '../interfaces';
-import styles from './pages.module.scss';
+//import styles from './pages.module.scss';
 
 // демо-данные напрямую
 import data from '../data';
@@ -51,11 +50,6 @@ export const Home = ({
 		addToCart(id);
 	};
 
-	const handleRemoveFromCart = (id: string) => {
-		//console.log('handleRemoveFromCart', id);
-		delFromCart(id);
-	};
-
 	const sortChange = (text: any) => {
 		setSort(text);
 	};
@@ -87,9 +81,6 @@ export const Home = ({
 				</div>
 			</div>{/* container */}
 			<Inst />{/* fluid */}
-			<div className={styles.cartMini}>
-				<Cart products={products} cartItems={cart} handleRemoveFromCart={handleRemoveFromCart} />
-			</div>			
 		</>
 	);
 };

@@ -1,13 +1,15 @@
 import React, {useEffect} from 'react';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import {IApp} from './interfaces';
-import Nav from './components/Nav/Nav';
 import Loader from './components/Loader/Loader';
 import {Home} from './pages/Home';
 import {About} from './pages/About';
 import New from './pages/New';
 import Contact from './pages/Contact';
+import Header from './components/Header/Header';
 import Footer from './components/Footer/Footer';
+import BsModal from './components/BsModal/BsModal';
+import Cart from './components/Cart/Cart';
 
 const App = ({
 	requestProductsSaga,
@@ -20,26 +22,14 @@ const App = ({
 	// eslint-disable-next-line
 	}, []);
 
-	const title = 'React Pizza Shop App';
-	const links = [
-		{link: '/', name: 'Меню', exact: true},
-		{link: '/about', name: 'О нас', exact: true},
-		{link: '/contact', name: 'Контакты', exact: true},
-		// {link: '/new', name: 'Новая', exact: true},
-	];
+	const handleRemoveFromCart = (id: string) => {
+		//console.log('handleRemoveFromCart', id);
+		delFromCart(id);
+	};
 
 	return (
 		<BrowserRouter basename='/demo/pizza/'>
-			<div className='container navHeader'>
-				<div className='row'>
-					<div className='col-md-6'>
-						<Nav title={title} links={links} />
-					</div>
-					<div className='col-md-6'>
-						Контакты, Корзина, язык
-					</div>
-				</div>
-			</div>
+			<Header />
 			{loading
 				? (
 					<div className={'container'}>
@@ -71,6 +61,9 @@ const App = ({
 				)
 			}
 			<Footer />
+			<BsModal title='Ваш заказ'>
+				<Cart products={products} cartItems={cart} handleRemoveFromCart={handleRemoveFromCart} />
+			</BsModal>
 		</BrowserRouter>
 	);
 };
