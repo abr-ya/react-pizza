@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useState, useEffect} from 'react';
 import {BrowserRouter, Switch, Route, Redirect} from 'react-router-dom';
 import {IApp} from './interfaces';
 import Loader from './components/Loader/Loader';
@@ -22,6 +22,15 @@ const App = ({
 	// eslint-disable-next-line
 	}, []);
 
+	const [firstPizza, setFirstPizza] = useState('');
+
+	useEffect(() => {
+		if (products.length > 0 && Object.keys(cart).length > 0) {
+			const index = Object.keys(cart)[0].slice(1);
+			setFirstPizza(products.find(({id}) => id+'' === index).title);
+		}
+	}, [cart, products]);
+
 	const handleRemoveFromCart = (id: string) => {
 		//console.log('handleRemoveFromCart', id);
 		delFromCart(id);
@@ -31,7 +40,7 @@ const App = ({
 		<BrowserRouter
 			basename={process.env.NODE_ENV === 'development' ? '/' : '/demo/pizza/'}
 		>
-			<Header inCart={Object.keys(cart).length} />
+			<Header inCart={Object.keys(cart).length} firstPizza={firstPizza} />
 			{loading
 				? (
 					<div className={'container'}>

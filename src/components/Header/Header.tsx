@@ -5,9 +5,10 @@ import HeaderRight from '../HeaderRight/HeaderRight';
 
 interface IHeader {
 	inCart: number;
+	firstPizza: string;
 }
 
-const Header = ({inCart}: IHeader) => {
+const Header = ({inCart, firstPizza}: IHeader) => {
 	const links = [
 		{link: '/', name: 'Меню', exact: true},
 		{link: '/about', name: 'О нас', exact: true},
@@ -21,7 +22,7 @@ const Header = ({inCart}: IHeader) => {
 					<Nav links={links} />
 				</div>
 				<div className='col-md-6'>
-					<HeaderRight inCart={inCart} />
+					<HeaderRight inCart={inCart} firstPizza={firstPizza} />
 				</div>
 			</div>
 		</div>

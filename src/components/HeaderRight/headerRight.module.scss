@@ -1,19 +1,9 @@
 .headerRight {
-	background-color:gainsboro;
 	display: flex;
+    align-items: center;
+	height: 100%;
 }
 
-.contact {
-	width: 40%;
-}
-
-.order {
-	width: 40%;
-}
-
-.lang {
-	width: 20%;
-}
 
 .big {
 	font-family: Alegreya;
@@ -22,6 +12,12 @@
 	text-transform: uppercase;
 	line-height: normal;
 	letter-spacing: 1px;
+	z-index: 200;
+}
+
+.phone {
+	font-size: 24px;
+	color: #000;
 }
 
 .small {
@@ -30,3 +26,68 @@
 	letter-spacing: normal;
 	color: #848a9a;
 }
+
+
+.contact {
+	width: 290px;
+	display: flex;
+	z-index: 200;
+}
+
+.contactIcon {
+	display: flex;
+	height: 50px;
+	width: 50px;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	margin: 0 5px;
+}
+
+.contactText {
+	display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.contactIconCount {
+	position: absolute;
+	top: 0;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	width: 20px;
+	height: 20px;
+	border-radius: 50%;
+	background-color: #e52d2d;
+	font-size: 11px;
+	font-weight: 500;
+	line-height: 1.59;
+}
+
+.order {
+	width: 290px;
+	display: flex;
+	cursor: pointer;
+	z-index: 200;
+}
+
+.lang {
+	width: 80px;
+	z-index: 200;
+}
+
+.lang div {
+	display: flex;
+    align-items: center;
+    justify-content: center;
+	width: 48px;
+	height: 48px;
+	background-color: #eff0f1;
+	border-radius: 50%;
+	z-index: 200;
+	cursor: pointer;
+}
+
