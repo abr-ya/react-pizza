@@ -5,6 +5,27 @@
 	width: 100%;
 }
 
+.navbarNavHF {
+	width: 100%;
+}
+
+.brand {
+	height: 84px;
+	width: 182px;
+	padding: 0;
+}
+
+.brandHF {
+	height: 32px;
+	width: 69px;
+	padding: 0;
+	margin-right: 183px;
+}
+
+.brandImg {
+    height: 100%;
+}
+
 .navbarNav li {
 	font-family: Alegreya;
 	font-size: 18px;
@@ -16,4 +37,10 @@
 
 .navbarNav li a {
 	color: #000;
+}
+
+.navbarNavHF li {
+	font-size: 16px;
+	font-weight: bold;
+	letter-spacing: 0.89px;
 }

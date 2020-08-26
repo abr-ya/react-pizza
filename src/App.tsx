@@ -41,6 +41,7 @@ const App = ({
 			basename={process.env.NODE_ENV === 'development' ? '/' : '/demo/pizza/'}
 		>
 			<Header inCart={Object.keys(cart).length} firstPizza={firstPizza} />
+			<div className="header-bg"></div>
 			{loading
 				? (
 					<div className={'container'}>

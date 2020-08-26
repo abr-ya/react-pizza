@@ -4,6 +4,7 @@ import styles from './nav.module.scss';
 
 interface INav {
 	links: ILink[];
+	isHeaderFixed: boolean;
 }
 
 interface ILink {
@@ -12,11 +13,15 @@ interface ILink {
 	exact: boolean;
 }
 
-const Nav = ({links}: INav) => {
+const Nav = ({links, isHeaderFixed}: INav) => {
+	const menuClickHandler = () => {
+		window.scrollTo(0,0);
+	};
+
 	let htmlLinks: any[] = [];
 	if (Array.isArray(links) && links.length) {
 		htmlLinks = links.map((item, index) => (
-			<li className="nav-item" key={index} >
+			<li className="nav-item" key={index} onClick={menuClickHandler}>
 				<NavLink exact={item.exact} to={item.link} className="nav-link">{item.name}</NavLink>
 			</li>			
 		));
@@ -24,10 +29,10 @@ const Nav = ({links}: INav) => {
 
 	return (
 		<nav className="navbar navbar-expand-lg">
-			<div className="navbar-brand">
-				<img src="img/logo.png" alt="logo"/>
+			<div className={`navbar-brand ${isHeaderFixed ? styles.brandHF : styles.brand}`}>
+				<img className={styles.brandImg} src="img/logo.png" alt="logo"/>
 			</div>
-			<ul className={`navbar-nav ${styles.navbarNav}`}>
+			<ul className={`navbar-nav ${styles.navbarNav} ${isHeaderFixed ? styles.navbarNavHF : ''}`}>
 				{htmlLinks}
 			</ul>
 		</nav>
