@@ -36,7 +36,7 @@ const Header = ({inCart, firstPizza}: IHeader) => {
 						<Nav links={links} isHeaderFixed={isHeaderFixed} />
 					</div>
 					<div className='col-md-6'>
-						<HeaderRight inCart={inCart} firstPizza={firstPizza} />
+						<HeaderRight inCart={inCart} firstPizza={firstPizza} isHeaderFixed={isHeaderFixed} />
 					</div>
 				</div>
 			</div>

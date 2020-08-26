@@ -28,7 +28,7 @@ const Nav = ({links, isHeaderFixed}: INav) => {
 	}
 
 	return (
-		<nav className="navbar navbar-expand-lg">
+		<nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
 			<div className={`navbar-brand ${isHeaderFixed ? styles.brandHF : styles.brand}`}>
 				<img className={styles.brandImg} src="img/logo.png" alt="logo"/>
 			</div>

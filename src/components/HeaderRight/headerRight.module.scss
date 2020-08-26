@@ -15,9 +15,17 @@
 	z-index: 200;
 }
 
+.bigHF {
+	font-size: 14px;
+}
+
 .phone {
 	font-size: 24px;
 	color: #000;
+}
+
+.phoneHF {
+	font-size: 18px;
 }
 
 .small {
@@ -38,10 +46,25 @@
 	display: flex;
 	height: 50px;
 	width: 50px;
-	align-items: center;
+	align-items: flex-end;
 	justify-content: center;
 	position: relative;
 	margin: 0 5px;
+}
+
+.contactIconHF {
+	height: 40px;
+	width: 40px;
+}
+
+.contactIcon img {
+	height: 40px;
+	width: 40px;
+}
+
+.contactIconHF img {
+	height: 32px;
+	width: 32px;
 }
 
 .contactText {
@@ -77,6 +100,10 @@
 .lang {
 	width: 80px;
 	z-index: 200;
+}
+
+.langHF {
+	display: none;
 }
 
 .lang div {
