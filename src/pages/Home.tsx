@@ -63,23 +63,11 @@ export const Home = ({
 	return (
 		<>
 			<Banner />{/* fluid */}
-			<div className='container'>
-				<Sales sales={data.sales} />	
-				<div className='row'>
-					<div className='col-md-12'>
-						<Filter size={size} sort={sort} handlers={filterHandlers} count={sortedProducts.length} />
-						<Products data={sortedProducts} handleAddToCart={handleAddToCart} />
-					</div>
-				</div>
-			</div>{/* container */}
+			<Sales sales={data.sales} />{/* container */}
+			<Filter size={size} sort={sort} handlers={filterHandlers} count={sortedProducts.length} />{/* container */}
+			<Products data={sortedProducts} handleAddToCart={handleAddToCart} />{/* container */}
 			<Delivery />{/* fluid */}
-			<div className='container'>
-				<div className='row'>
-					<div className='col-md-12'>
-						<Work />
-					</div>
-				</div>
-			</div>{/* container */}
+			<Work />{/* container */}
 			<Inst />{/* fluid */}
 		</>
 	);

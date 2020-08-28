@@ -17,23 +17,25 @@ const Filter = ({size, sort, handlers, count}: IFilter) => {
 	});
 
 	return (
-		<div className={`row ${styles.filter}`}>
-			<div className="col-sm-12">
-				<h2>Выберите пиццу</h2>
-				<div className={styles.wrapper}>
-					{filters.map((item: any) => (
-						<h3
-							className={`${styles.filterItem} ${item[0] === size ? styles.active : ''}`}
-							onClick={() => filterClickHandler(item[0])}
-							key={item[0]}
-						>
-							{item[1]}
-						</h3>
-					))}
-				</div>		
+		<div className='container'>
+			<div className={`row ${styles.filter}`}>
+				<div className="col-sm-12">
+					<h2>Выберите пиццу</h2>
+					<div className={styles.wrapper}>
+						{filters.map((item: any) => (
+							<h3
+								className={`${styles.filterItem} ${item[0] === size ? styles.active : ''}`}
+								onClick={() => filterClickHandler(item[0])}
+								key={item[0]}
+							>
+								{item[1]}
+							</h3>
+						))}
+					</div>		
+				</div>
 			</div>
 		</div>
-	)
+	);
 };
 
 export default Filter;

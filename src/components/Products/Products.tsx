@@ -12,8 +12,10 @@ const Products = ({data, handleAddToCart}: IProducts) => {
 	//console.log('productsHtml', productsHtml);
 
 	return (
-		<div className='row mb-4'>
-			{productsHtml}
+		<div className='container'>	
+			<div className='row mb-4'>
+				{productsHtml}
+			</div>
 		</div>
 	);
 };
