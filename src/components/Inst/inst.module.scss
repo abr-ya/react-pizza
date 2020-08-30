@@ -1,4 +1,25 @@
 .inst {
-	background-color:#f8f6f3;
-	height: 200px; // 540
+	min-height: 200px;
+}
+
+.pizzamenu {
+	font-family: Alegreya;
+	font-size: 24px;
+	font-weight: 900;
+	line-height: 1.5;
+	color: #848a9a;
+	display: block;
+	text-align: center;
+	margin-bottom: 40px;
+}
+
+.imgWrapper {
+	width: 25%;
+	min-height: 100px;
+	float: left;
+}
+
+.imgWrapper img {
+	width: 100%;
+	height: auto;
 }
