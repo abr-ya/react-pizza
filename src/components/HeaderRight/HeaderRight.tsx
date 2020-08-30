@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from './headerRight.module.scss';
-import {writeCorrect} from '../../utils';
+import {writeCorrect, mediaShow} from '../../utils';
 
 interface IHeaderRight {
 	inCart: number;
@@ -52,7 +52,11 @@ const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 			</div>
 			<div className={`${styles.lang} ${isHeaderFixed ? styles.langHF : ''}`}>
 				<div className={styles.big} onClick={() => console.log('меню переключения языков')}>
-					EN
+					<span className={mediaShow.xl}>XL</span>
+					<span className={mediaShow.lg}>LG</span>
+					<span className={mediaShow.md}>MD</span>
+					<span className={mediaShow.sm}>SM</span>
+					<span className={mediaShow.xs}>XS</span>
 				</div>
 			</div>
 		</div>

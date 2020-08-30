@@ -9,3 +9,11 @@ export const writeCorrect = (num, titles) => {
 	if (['2','3','4'].includes(key)) return titles[1];
 	return titles[2];
 };
+
+export const mediaShow = {
+	xs: 'd-block d-sm-none',
+	sm: 'd-none d-sm-block d-md-none',
+	md: 'd-none d-md-block d-lg-none',
+	lg: 'd-none d-lg-block d-xl-none',
+	xl: 'd-none d-xl-block',
+};
