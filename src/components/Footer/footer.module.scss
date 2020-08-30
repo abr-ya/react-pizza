@@ -1,4 +1,49 @@
-.footer {
+.footerWrapper {
 	background-color:#000;
-	min-height: 100px; // 540
+}
+
+.footer {
+	min-height: 100px;
+	color: #fff;
+}
+
+.brand {
+	height: 52px;
+	width: 113px;
+	padding: 0;
+	margin: 32px 0;
+}
+
+.big {
+	font-family: Alegreya;
+	font-size: 18px;
+	font-weight: 900;
+	text-transform: uppercase;
+	line-height: normal;
+	letter-spacing: 1px;
+}
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.phone {
+	font-size: 24px;
+	color: #fff;
+}
+
+.small {
+	font-size: 12px;
+	line-height: 1.5;
+	letter-spacing: normal;
+}
+
+.privacy {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	font-size: 12px;
+	line-height: 1.5;
 }
