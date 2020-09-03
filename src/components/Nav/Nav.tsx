@@ -28,15 +28,20 @@ const Nav = ({links, isHeaderFixed}: INav) => {
 	}
 
 	return (
-		<nav className={`navbar navbar-expand-lg ${styles.navbar}`}>
+		<nav className={`navbar navbar-expand-xl navbar-light ${styles.navbar}`}>
 			<div className={`navbar-brand ${isHeaderFixed ? styles.brandHF : styles.brand}`}>
 				<a href="/">
 					<img className={styles.brandImg} src="img/logo.png" alt="logo"/>
 				</a>
 			</div>
-			<ul className={`navbar-nav ${styles.navbarNav} ${isHeaderFixed ? styles.navbarNavHF : ''}`}>
-				{htmlLinks}
-			</ul>
+			<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" aria-controls="navbarId" aria-expanded="false" aria-label="Toggle navigation">
+				<span className="navbar-toggler-icon"></span>
+			</button>
+			<div className="collapse navbar-collapse" id="navbarId">
+				<ul className={`navbar-nav ${styles.navbarNav} ${isHeaderFixed ? styles.navbarNavHF : ''}`}>
+					{htmlLinks}
+				</ul>				
+			</div>
 		</nav>
 	);
 }

@@ -19,3 +19,10 @@
 .active {
     color: #e52d2d;
 }
+
+/* Small */
+@media only screen and (max-width: 768px) {
+    .wrapper {
+        width: 100%;
+    }	
+}

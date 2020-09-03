@@ -44,3 +44,50 @@
 	font-size: 14px;
 	line-height: 1.5;
 }
+
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+	.item {
+		width: calc(100% - 60px);
+		margin: 30px;
+	}
+
+	.itemTextBlock h3 {
+		font-size: 20px;
+		margin: 0;
+	}	
+
+	.item:nth-child(2n) {
+		flex-direction: row;
+	}
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+	.item {
+		width: 100%;
+		margin: 20px 0;
+	}
+
+	.itemImage {
+		width: 80px;
+		height: 80px;
+	}
+	
+	.itemImageMask {
+		width: 82px;
+		height: 82px;
+		left: -1px;
+		top: -1px;
+	}
+
+	.itemTextBlock {
+		padding: 0 16px;
+	}
+}

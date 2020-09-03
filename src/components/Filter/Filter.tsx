@@ -1,6 +1,7 @@
 import React from 'react';
 import {IFilter} from '../../interfaces';
 import styles from './filter.module.scss';
+import {mediaShow} from '../../utils';
 
 const filters: any = [
 	['all','Все'],
@@ -28,7 +29,10 @@ const Filter = ({size, sort, handlers, count}: IFilter) => {
 								onClick={() => filterClickHandler(item[0])}
 								key={item[0]}
 							>
-								{item[1]}
+								<span className={mediaShow.mdUp}>{item[1]}</span>
+								<span className={mediaShow.smDown}>
+									<img className={styles.image} src={`img/filter/${item[0]}.svg`} alt={`icon-${item[0]}`}/>
+								</span>
 							</h3>
 						))}
 					</div>		

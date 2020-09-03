@@ -16,4 +16,6 @@ export const mediaShow = {
 	md: 'd-none d-md-block d-lg-none',
 	lg: 'd-none d-lg-block d-xl-none',
 	xl: 'd-none d-xl-block',
+	mdUp: 'd-none d-md-block',
+	smDown: 'd-sm-block d-md-none',
 };
