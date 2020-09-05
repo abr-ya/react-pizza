@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from './headerRight.module.scss';
 import {writeCorrect, mediaShow} from '../../utils';
+import MobileMenu from '../MobileMenu/MobileMenu';
 
 interface IHeaderRight {
 	inCart: number;
@@ -17,9 +18,11 @@ const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 		<div className={styles.headerRight}>
 			<div className={styles.contact}>
 				<div className={`${styles.contactIcon} ${isHeaderFixed ? styles.contactIconHF : ''}`}>
-					<img src="img/icon-phone.svg" alt="icon-order"/>
+					<a href="tel:+79184326587">
+						<img src="img/icon-phone.svg" alt="icon-order"/>
+					</a>
 				</div>
-				<div className={styles.contactText}>
+				<div className={`${styles.contactText} ${mediaShow.xl}`}>
 					<div>
 						<a
 							href="tel:+79184326587"
@@ -40,7 +43,7 @@ const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 					</div>
 					<img src="img/icon-cart.svg" alt="icon-cart"/>
 				</div>
-				<div className={styles.contactText}>
+				<div className={`${styles.contactText} ${mediaShow.xl}`}>
 					<div className={`${styles.big} ${isHeaderFixed ? styles.bigHF : ''}`}>Ваш заказ</div>
 					<div className={styles.small}>
 						{firstPizza}
@@ -59,6 +62,12 @@ const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 					<span className={mediaShow.xs}>XS</span>
 				</div>
 			</div>
+			<div
+				className={`${styles.mMenu} ${mediaShow.lgDown} ${isHeaderFixed ? styles.langHF : ''}`}
+				onClick={() => console.log('мобильное меню')}
+			>
+				<MobileMenu />
+			</div>	
 		</div>
 	);
 };

@@ -1,6 +1,6 @@
 .headerRight {
 	display: flex;
-    align-items: center;
+	align-items: center;
 	height: 100%;
 }
 
@@ -118,3 +118,35 @@
 	cursor: pointer;
 }
 
+.mMenu {
+	width: 80px;
+	z-index: 200;
+}
+
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+	.contact {
+		width: auto;
+		margin-right: 30px;
+	}
+
+	.order {
+		width: auto;
+		margin-right: 70px;
+	}
+
+	.headerRight {
+		justify-content: flex-end;
+	}
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+
+}

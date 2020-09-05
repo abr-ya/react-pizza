@@ -34,9 +34,6 @@ const Nav = ({links, isHeaderFixed}: INav) => {
 					<img className={styles.brandImg} src="img/logo.png" alt="logo"/>
 				</a>
 			</div>
-			<button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarId" aria-controls="navbarId" aria-expanded="false" aria-label="Toggle navigation">
-				<span className="navbar-toggler-icon"></span>
-			</button>
 			<div className="collapse navbar-collapse" id="navbarId">
 				<ul className={`navbar-nav ${styles.navbarNav} ${isHeaderFixed ? styles.navbarNavHF : ''}`}>
 					{htmlLinks}

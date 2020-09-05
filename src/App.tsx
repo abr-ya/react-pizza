@@ -25,10 +25,10 @@ const App = ({
 	const [firstPizza, setFirstPizza] = useState('');
 
 	useEffect(() => {
-		if (products.length > 0 && Object.keys(cart).length > 0) {
-			const index = Object.keys(cart)[0].slice(1);
-			setFirstPizza(products.find(({id}) => id+'' === index).title);
-		}
+		const firstPizzaText: string = products.length > 0 && Object.keys(cart).length > 0
+			? products.find(({id}) => id+'' === Object.keys(cart)[0].slice(1)).title
+			: 'пицца не выбрана'
+		setFirstPizza(firstPizzaText);
 	}, [cart, products]);
 
 	const handleRemoveFromCart = (id: string) => {
