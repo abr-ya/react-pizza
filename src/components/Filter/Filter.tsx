@@ -2,6 +2,7 @@ import React from 'react';
 import {IFilter} from '../../interfaces';
 import styles from './filter.module.scss';
 import {mediaShow} from '../../utils';
+import Icon from './Icon';
 
 const filters: any = [
 	['all','Все'],
@@ -24,16 +25,18 @@ const Filter = ({size, sort, handlers, count}: IFilter) => {
 					<h2>Выберите пиццу</h2>
 					<div className={styles.wrapper}>
 						{filters.map((item: any) => (
-							<h3
-								className={`${styles.filterItem} ${item[0] === size ? styles.active : ''}`}
+							<div
+								className={styles.filterItem}
 								onClick={() => filterClickHandler(item[0])}
-								key={item[0]}
+								key={item[0]}							
 							>
-								<span className={mediaShow.mdUp}>{item[1]}</span>
-								<span className={mediaShow.smDown}>
-									<img className={styles.image} src={`img/filter/${item[0]}.svg`} alt={`icon-${item[0]}`}/>
+								<h3 className={`${mediaShow.mdUp} ${item[0] === size ? styles.active : ''}`}>
+									{item[1]}
+								</h3>
+								<span className={`${mediaShow.smDown}`}>
+								 	<Icon icon={item[0]} active={item[0] === size} />
 								</span>
-							</h3>
+							</div>
 						))}
 					</div>		
 				</div>

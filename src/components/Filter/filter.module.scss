@@ -3,6 +3,14 @@
     margin-bottom: 10px;
 }
 
+.filter h2 {
+    font-size: 52px;
+}
+
+.filter h3 {
+    font-size: 18px;
+}
+
 .wrapper {
     width: 600px;
     margin: 0 auto;
@@ -20,9 +28,29 @@
     color: #e52d2d;
 }
 
+.svg {
+    height: 25px;
+}
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+    .filter h2 {
+        font-size: 40px;
+    }
+
+    .filter h3 {
+        font-size: 16px;
+    }
+}
+
 /* Small */
 @media only screen and (max-width: 768px) {
+    .filter h2 {
+        font-size: 28px;
+    }
+    
     .wrapper {
-        width: 100%;
+        width: calc(320px - 88px);
+        margin-top: 25px;
     }	
 }
