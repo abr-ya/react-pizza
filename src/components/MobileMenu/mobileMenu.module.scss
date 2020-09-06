@@ -1,45 +1,63 @@
 .hiddenMenu {
 	display: block;
 	position: fixed;
-	list-style:none;
 	padding: 10px;
 	margin: 0;
 	box-sizing: border-box;
-	width: 200px;
-	background-color: #eee;
+	background-color: #313945;
 	height: 100%;
 	top: 0;
-	right: -200px;
 	transition: right .2s;
 	z-index: 2000;
 	transform: translateZ(0);
 	backface-visibility: hidden;
-  }
+}
+
+.hiddenMenu ul {
+	list-style: none;
+	padding: 0;
+}
+
+.hiddenMenu li {
+	display: block;
+	width: 200px;
+	color: #fff;
+	margin: 0 auto;
+	padding: 25px 0;
+	border-top: 1px solid #1d2228;
+}
+
+.hiddenMenu li:first-child {
+	margin-top: 90px;
+	border-top: none;
+}
+
+.hiddenMenu li a {
+	display: block;
+	font-family: Alegreya;
+	font-size: 18px;
+	font-weight: bold;
+	letter-spacing: 1px;
+	color: #fff;
+	text-align: center;
+    text-transform: uppercase;
+}
 
 .btnMenu {
-	color: #fff;
-	background-color: #666;
 	padding: 5px;
 	position: absolute;
 	top: 20px;
 	right: 30px;
 	cursor: pointer;
 	z-index: 300;
-	width: 25px;
-	transform: translateZ(0);
-	backface-visibility: hidden;
 }
 
-.btnMenu span {
-	display: block;
-	height: 5px;
-	background-color: #fff;
-	margin: 5px 0 0;
-	position: relative;
-}
-
-.btnMenu span.first {
-	margin-top: 0;
+.btnClose {
+	position: absolute;
+	top: 50px;
+	right: 40px;
+	cursor: pointer;
+	z-index: 300;
 }
 
 .fog {

@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react';
 import styles from './header.module.scss';
 import Nav from '../Nav/Nav';
 import HeaderRight from '../HeaderRight/HeaderRight';
+import {ILink} from '../../interfaces';
 
 interface IHeader {
 	inCart: number;
@@ -22,7 +23,7 @@ const Header = ({inCart, firstPizza}: IHeader) => {
 		}
 	}, []);
 
-	const links = [
+	const links: ILink[] = [
 		{link: '/', name: 'Меню', exact: true},
 		{link: '/about', name: 'О нас', exact: true},
 		{link: '/contact', name: 'Контакты', exact: true},
@@ -36,7 +37,7 @@ const Header = ({inCart, firstPizza}: IHeader) => {
 						<Nav links={links} isHeaderFixed={isHeaderFixed} />
 					</div>
 					<div className='col-md-6'>
-						<HeaderRight inCart={inCart} firstPizza={firstPizza} isHeaderFixed={isHeaderFixed} />
+						<HeaderRight links={links} inCart={inCart} firstPizza={firstPizza} isHeaderFixed={isHeaderFixed} />
 					</div>
 				</div>
 			</div>

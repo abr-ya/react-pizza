@@ -1,27 +1,19 @@
 import React from 'react';
 import {NavLink} from 'react-router-dom';
 import styles from './nav.module.scss';
+import {ILink} from '../../interfaces';
+import {scrollToTop} from '../../utils';
 
 interface INav {
 	links: ILink[];
 	isHeaderFixed: boolean;
 }
 
-interface ILink {
-	link: string;
-	name: string;
-	exact: boolean;
-}
-
 const Nav = ({links, isHeaderFixed}: INav) => {
-	const menuClickHandler = () => {
-		window.scrollTo(0,0);
-	};
-
 	let htmlLinks: any[] = [];
 	if (Array.isArray(links) && links.length) {
 		htmlLinks = links.map((item, index) => (
-			<li className="nav-item" key={index} onClick={menuClickHandler}>
+			<li className="nav-item" key={index} onClick={scrollToTop}>
 				<NavLink exact={item.exact} to={item.link} className="nav-link">{item.name}</NavLink>
 			</li>			
 		));

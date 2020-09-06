@@ -14,6 +14,12 @@ export interface IApp {
 	cart: any;
 }
 
+export interface ILink {
+	link: string;
+	name: string;
+	exact: boolean;
+}
+
 export interface IHome {
 	setSort: (text: string) => void;
 	setSize: (text: string) => void;

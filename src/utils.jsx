@@ -20,3 +20,19 @@ export const mediaShow = {
 	lgDown: 'd-block d-xl-none',
 	smDown: 'd-sm-block d-md-none',
 };
+
+export const scrollToTop = () => {
+	window.scrollTo(0,0);
+};
+
+export const screen = () => {
+	const breakPoints = [
+		['xl', 1400],
+		['lg', 896],
+		['md', 768],
+		['sm', 576],
+		['xs', 0],	
+	];
+	const width = document.documentElement.clientWidth;
+	return breakPoints.find(item => width >= item[1])[0]; 
+};

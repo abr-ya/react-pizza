@@ -2,14 +2,16 @@ import React from 'react';
 import styles from './headerRight.module.scss';
 import {writeCorrect, mediaShow} from '../../utils';
 import MobileMenu from '../MobileMenu/MobileMenu';
+import {ILink} from '../../interfaces';
 
 interface IHeaderRight {
+	links: ILink[];
 	inCart: number;
 	firstPizza: string;
 	isHeaderFixed: boolean;
 }
 
-const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
+const HeaderRight = ({links, inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 	const cartIconClickHandler = () => {
 		$('#bsModal1').modal('toggle');
 	};
@@ -62,12 +64,9 @@ const HeaderRight = ({inCart, firstPizza, isHeaderFixed}: IHeaderRight) => {
 					<span className={mediaShow.xs}>XS</span>
 				</div>
 			</div>
-			<div
-				className={`${styles.mMenu} ${mediaShow.lgDown} ${isHeaderFixed ? styles.langHF : ''}`}
-				onClick={() => console.log('мобильное меню')}
-			>
-				<MobileMenu />
-			</div>	
+			<div className={`${styles.mMenu} ${mediaShow.lgDown} ${isHeaderFixed ? styles.langHF : ''}`}>
+				<MobileMenu links={links} />
+			</div>
 		</div>
 	);
 };
