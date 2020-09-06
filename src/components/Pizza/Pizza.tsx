@@ -1,6 +1,6 @@
 import React, {useState} from 'react'; //, useEffect
 import {IPizza} from '../../interfaces';
-import * as utils from '../../utils';
+import {formatCurrency, screen} from '../../utils';
 import styles from './pizza.module.scss';
 import SizeSetter from '../SizeSetter/SizeSetter';
 
@@ -14,7 +14,7 @@ const Pizza = ({data, handleAddToCart}: IPizza) => {
 	// }, [size]);
 	
 	return (
-		<div className={styles.pizza}>
+		<div className={styles.pizza} style={{flexDirection: (screen() === 'xs' ? 'row' : 'column')}}>
 			<div className={styles.pizzaBlock}>
 				<div className={styles.circle1}></div>
 				<div className={styles.circle2}></div>
@@ -23,7 +23,6 @@ const Pizza = ({data, handleAddToCart}: IPizza) => {
 					<img src={`products/${data.image}`} alt={data.title} />
 				</div>
 			</div>
-
 			
 			<div className={styles.textBlock}>
 				<h3>{data.title}</h3>
@@ -31,13 +30,26 @@ const Pizza = ({data, handleAddToCart}: IPizza) => {
 					{description}
 				</p>
 				<SizeSetter start={size || 'M'} setter={setSize} />
-				<span className={styles.price}>{utils.formatCurrency(data.price2[size])}</span>
-				<button
-					className={`btn btn-primary ${styles.btn}`}
-					onClick={() => handleAddToCart(`${size}${data.id}`)}
-				>
-					<span>Заказать</span>
-				</button>
+				{screen() === 'xs'
+					? (<>
+						<button
+							className={`btn btn-primary ${styles.btn}`}
+							onClick={() => handleAddToCart(`${size}${data.id}`)}
+						>
+							{formatCurrency(data.price2[size])}
+						</button>						
+					</>)
+					: (<>
+						<span className={styles.price}>{formatCurrency(data.price2[size])}</span>
+						<button
+							className={`btn btn-primary ${styles.btn}`}
+							onClick={() => handleAddToCart(`${size}${data.id}`)}
+						>
+							<span>Заказать</span>
+						</button>						
+					</>)
+				}
+
 			</div>
 		</div>
 	);

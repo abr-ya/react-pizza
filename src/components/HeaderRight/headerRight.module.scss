@@ -44,12 +44,11 @@
 
 .contactIcon {
 	display: flex;
-	height: 50px;
-	width: 50px;
 	align-items: flex-end;
 	justify-content: center;
 	position: relative;
 	margin: 0 5px;
+	padding: 5px;
 }
 
 .contactIconHF {
@@ -143,10 +142,16 @@
 
 /* Medium */
 @media only screen and (max-width: 896px) {
-
+	.contact {
+		width: auto;
+		margin-right: 0;
+	}
 }
 
 /* Small */
 @media only screen and (max-width: 768px) {
-
+	.contactIcon img {
+		height: 32px;
+		width: 32px;
+	}
 }

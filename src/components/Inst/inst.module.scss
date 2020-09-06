@@ -31,3 +31,26 @@
 	width: 100%;
 	height: auto;
 }
+
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+	.imgWrapper {
+		width: 50%;
+	}
+
+	.pizzamenu {
+		font-size: 16px;
+		margin-bottom: 15px;
+	}
+}

@@ -1,6 +1,7 @@
 .delivery {
 	background-color:#f8f6f3;
-	min-height: 144px; // 540
+	min-height: 144px;
+	padding-bottom: 30px;
 }
 
 .wrapper {
@@ -18,11 +19,37 @@
 }
 
 .left {
-	width: 70px;
+	width: 95px;
 	height: 70px;
 	margin-right: 25px;
 }
 
+.left img {
+	width: 100%;
+	height: auto;
+}
+
 .right h3 {
 	margin-top: 0;
+}
+
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+	.delivery h2 {
+		margin-top: 30px;
+	}
+
+	.wrapper {
+		margin-bottom: 10px;		
+	}
+
+	.card {
+		padding: 15px;
+		min-height: 100px;
+	}
+
+	.card p {
+		margin-bottom: 0;
+	}
 }

@@ -17,8 +17,8 @@
 }
 
 .brand {
-	height: 84px;
 	width: 182px;
+	height: 84px;
 	padding: 0;
 }
 
@@ -50,4 +50,26 @@
 	font-size: 16px;
 	font-weight: bold;
 	letter-spacing: 0.89px;
+}
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+	.brand {
+		width: 85px;
+		height: 40px;
+	}
+
+	.header-bg {
+		height: 80px;
+	}
 }

@@ -44,7 +44,7 @@ const Delivery = () => {
 								</div>
 								<div className={styles.right}>
 									<h3>{item.title}</h3>
-									{item.text}
+									<p>{item.text}</p>
 								</div>
 							</div>
 						</div>					

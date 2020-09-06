@@ -71,3 +71,21 @@
 	z-index: 10000;
 	opacity: 0.4;
 }
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+	.btnMenu {
+		top: 10px;
+		right: 24px;
+	}
+}

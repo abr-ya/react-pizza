@@ -33,10 +33,10 @@ const Header = ({inCart, firstPizza}: IHeader) => {
 		<div className={`${styles.header} ${isHeaderFixed ? styles.headerFixed : styles.headerFull}`}>
 			<div className="container">
 				<div className='row'>
-					<div className='col-md-6'>
+					<div className='col-6'>
 						<Nav links={links} isHeaderFixed={isHeaderFixed} />
 					</div>
-					<div className='col-md-6'>
+					<div className='col-6'>
 						<HeaderRight links={links} inCart={inCart} firstPizza={firstPizza} isHeaderFixed={isHeaderFixed} />
 					</div>
 				</div>
