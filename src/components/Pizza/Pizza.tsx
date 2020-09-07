@@ -9,9 +9,13 @@ const Pizza = ({data, handleAddToCart}: IPizza) => {
 	const description = data.description.length <= 80 ? data.description : `${data.description.slice(0,80)}...`
 	//console.log(data.description.length);
 
-	// useEffect(() => {
-	// 	console.log(data.price2[size]);
-	// }, [size]);
+	const buyButtonHandler = (id: string) => {
+		handleAddToCart(id);
+		const mes = `Пицца "${data.title}" добавлена в заказ!`;
+		//setMessage(mes);
+		console.log(mes);
+		//setIsAlertShow(true);
+	};
 	
 	return (
 		<div className={styles.pizza} style={{flexDirection: (screen() === 'xs' ? 'row' : 'column')}}>
@@ -43,13 +47,12 @@ const Pizza = ({data, handleAddToCart}: IPizza) => {
 						<span className={styles.price}>{formatCurrency(data.price2[size])}</span>
 						<button
 							className={`btn btn-primary ${styles.btn}`}
-							onClick={() => handleAddToCart(`${size}${data.id}`)}
+							onClick={() => buyButtonHandler(`${size}${data.id}`)}
 						>
 							<span>Заказать</span>
 						</button>						
 					</>)
 				}
-
 			</div>
 		</div>
 	);
