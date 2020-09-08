@@ -34,18 +34,18 @@
 }
 
 .pizza {
-	width: 200px;
+	// width: 200px;
 	align-items: flex-start;
 	font-size: 12px;
 }
 
 .count {
-	width: 200px;
+	// width: 200px;
 	//background-color: gainsboro;
 }
 
 .price {
-	width: 120px;
+	// width: 120px;
 	position: relative;
 }
 
@@ -119,6 +119,11 @@ $pizzaPadding: 10px;
 }
 
 
+.textWrapper {
+	width: calc(100% - 120px);
+}
+
+
 .summa {
 	text-align: end;
 	margin-top: 20px;
@@ -133,4 +138,20 @@ $pizzaPadding: 10px;
 
 .summaValue {
 	font-size: 32px;
+}
+
+
+/* Large */
+@media only screen and (max-width: 1400px) {
+
+}
+
+/* Medium */
+@media only screen and (max-width: 896px) {
+
+}
+
+/* Small */
+@media only screen and (max-width: 768px) {
+
 }

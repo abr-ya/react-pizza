@@ -102,4 +102,8 @@ a.nav-link.active {
 	p {
 		font-size: 12px;
 	}
+
+	.modal-header, .modal-body, .modal-footer {
+		padding: 7px;
+	}
 }

@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {ICart} from '../../interfaces';
-import * as utils from '../../utils';
+import {formatCurrency} from '../../utils';
 import styles from './cart.module.scss';
 import NumberInputGroup from '../NumberInputGroup/NumberInputGroup';
 
@@ -53,27 +53,29 @@ const Cart = ({products, cartItems, handleRemoveFromCart, updateCart}: ICart) =>
 										<img src={`products/${product.image}`} alt={product.title} />
 									</div>
 								</div>
-								<div className={`${styles.cell} ${styles.pizza}`}>
-									<h4>{product.title}</h4>
-									<span>{`${sizes[pSize]} (${utils.formatCurrency(product.price2[pSize])} )`}</span>
-								</div>
-								<div className={`${styles.cell} ${styles.count}`}>
-									<NumberInputGroup
-										id={`${pSize}${pId}`}
-										numberValue={pQuantity}
-										saveInputHandler={saveInputHandler}
-										max={100}
-										multiplicity={1}
-									/>
-								</div>
-								<div className={`${styles.cell} ${styles.price}`}>
-									<span>{utils.formatCurrency(total)}</span>
-									<button
-										className={`btn btn-danger btn-xs ${styles.del}`}
-										onClick={() => handleRemoveFromCart(`${pSize}${pId}`)}
-									>
-										x
-									</button>
+								<div className={`row ${styles.textWrapper}`}>
+									<div className={`col-md-5 col-sm-12 ${styles.cell} ${styles.pizza}`}>
+										<h4>{product.title}</h4>
+										<span>{`${sizes[pSize]} (${formatCurrency(product.price2[pSize])} )`}</span>
+									</div>
+									<div className={`col-md-4 col-sm-12 ${styles.cell} ${styles.count}`}>
+										<NumberInputGroup
+											id={`${pSize}${pId}`}
+											numberValue={pQuantity}
+											saveInputHandler={saveInputHandler}
+											max={100}
+											multiplicity={1}
+										/>
+									</div>
+									<div className={`col-md-3 col-sm-12 ${styles.cell} ${styles.price}`}>
+										<span>{formatCurrency(total)}</span>
+										<button
+											className={`btn btn-danger btn-xs ${styles.del}`}
+											onClick={() => handleRemoveFromCart(`${pSize}${pId}`)}
+										>
+											x
+										</button>
+									</div>
 								</div>
 							</div>
 						);
@@ -82,7 +84,7 @@ const Cart = ({products, cartItems, handleRemoveFromCart, updateCart}: ICart) =>
 			)}
 			<div className={styles.summa}>
 				<span className={styles.summaText}>Сумма заказа:</span>
-				<span className={styles.summaValue}>{utils.formatCurrency(sum)}</span>
+				<span className={styles.summaValue}>{formatCurrency(sum)}</span>
 			</div>
 		</div>
 	);

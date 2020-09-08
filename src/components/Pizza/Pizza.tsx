@@ -4,17 +4,21 @@ import {formatCurrency, screen} from '../../utils';
 import styles from './pizza.module.scss';
 import SizeSetter from '../SizeSetter/SizeSetter';
 
-const Pizza = ({data, handleAddToCart}: IPizza) => {
+const Pizza = ({data, handleAddToCart, setAlert}: IPizza) => {
 	const [size, setSize] = useState(data.defaultSize);
 	const description = data.description.length <= 80 ? data.description : `${data.description.slice(0,80)}...`
 	//console.log(data.description.length);
 
 	const buyButtonHandler = (id: string) => {
 		handleAddToCart(id);
-		const mes = `Пицца "${data.title}" добавлена в заказ!`;
-		//setMessage(mes);
-		console.log(mes);
-		//setIsAlertShow(true);
+		const message = `Пицца "${data.title}" добавлена в заказ`;
+		setAlert({
+			show: true,
+			text: message,
+			type: 'success',
+			showT: 2,
+			outT: 1,
+		});
 	};
 	
 	return (

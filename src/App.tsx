@@ -11,14 +11,7 @@ import Footer from './components/Footer/Footer';
 import BsModal from './components/BsModal/BsModal';
 import Cart from './components/Cart/Cart';
 import BsAlert from './components/BsAlert/BsAlert';
-
-// temp - подумать, как лучше?
-interface IAlert {
-	text: string; // текст сообщения
-	type?: 'primary' | 'secondary' | 'success' | 'danger' | 'warning' | 'info' | 'light' | 'dark'; // bs-класс
-	show?: number; // время до автоскрытия, сек
-	out?: number; // время до скрытия, сек
-}
+import {IAlert} from './components/BsAlert/BsAlert';
 
 const App = ({
 	requestProductsSaga,
@@ -32,12 +25,12 @@ const App = ({
 	}, []);
 
 	const [firstPizza, setFirstPizza] = useState('');
-	const [isAlertShow, setIsAlertShow] = useState(false);
 	const [alert, setAlert] = useState<IAlert>({
+		show: false,
 		text: 'текст сообщения',
 		type: 'primary',
-		show: 2,
-		out: 1,
+		showT: 2,
+		outT: 1,
 	});
 
 	useEffect(() => {
@@ -73,16 +66,14 @@ const App = ({
 									setSort={setSort}
 									setSize={setSize}
 									addToCart={addToCart}
-									delFromCart={delFromCart}
-									updateCart={updateCart}
 									products={products}
 									sort={sort}
 									size={size}
-									cart={cart}
+									setAlert={setAlert}
 								/>
 							)}
 						/>
-						<Route path='/about' component={() => <About showAlert={() => setIsAlertShow(true)} setAlert={setAlert} />} />
+						<Route path='/about' component={() => <About setAlert={setAlert} />} />
 						<Route path='/new' component={New} />
 						<Route path='/contact' component={Contact} />
 						<Redirect to='/' />
@@ -98,15 +89,7 @@ const App = ({
 					updateCart={updateCart}
 				/>
 			</BsModal>
-			{isAlertShow &&
-				<BsAlert
-					text={alert.text}
-					type={alert.type}
-					show={alert.show}
-					out={alert.out}
-					hideAlert={() => setIsAlertShow(false)}
-				/>
-			}
+			{alert.show && <BsAlert alert={alert} setAlert={setAlert} />}
 		</BrowserRouter>
 	);
 };

@@ -1,3 +1,5 @@
+import {IAlert} from './components/BsAlert/BsAlert';
+
 export interface IApp {
 	showLoading: () => void;
 	hideLoading: (data: boolean) => void;
@@ -24,12 +26,13 @@ export interface IHome {
 	setSort: (text: string) => void;
 	setSize: (text: string) => void;
 	addToCart: (id: string) => void;
-	delFromCart: (id: string) => void;
-	updateCart: (id: string, quantity: number) => void;
+	// delFromCart: (id: string) => void;
+	// updateCart: (id: string, quantity: number) => void;
 	products: any[];
 	sort: string;
 	size: string;
-	cart: any;
+	// cart: any;
+	setAlert: (alert: IAlert) => void;
 }
 
 export interface ISale {
@@ -62,11 +65,13 @@ export interface ISales {
 export interface IProducts {
 	data: IProduct[];
 	handleAddToCart(id: string): void;
+	setAlert: (alert: IAlert) => void;
 }
 
 export interface IPizza {
 	data: IProduct;
 	handleAddToCart(id: string): void;
+	setAlert: (alert: IAlert) => void;
 }
 
 export interface ISizeSetter {

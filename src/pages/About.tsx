@@ -1,30 +1,26 @@
 import React from 'react';
 import styles from './pages.module.scss';
 import NumberInputGroup from '../components/NumberInputGroup/NumberInputGroup';
+import {IAlert} from '../components/BsAlert/BsAlert';
 
 interface IAbout {
-	showAlert: () => void;
-	setAlert: (alert: any) => void;
+	setAlert: (alert: IAlert) => void;
 }
 
-export const About = ({showAlert, setAlert}: IAbout) => {
+export const About = ({setAlert}: IAbout) => {
 	const saveInputHandler = (id: string, quantity: number) => {
 		console.log('saveInputHandler:', id, quantity);
 	};
 
-	const btn1ClickHandler = () => {
-		console.log('btn1ClickHandler:');
+	const alertClickHandler = () => {
 		setAlert({
-			text: 'текст сообщения 2',
+			show: true,
+			text: 'текст сообщения из About!',
 			type: 'success',
-			show: 2,
-			out: 1,
+			showT: 2,
+			outT: 1,
 		});
-		showAlert();
 	};
-
-	// const message = 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cumque, sequi!';
-	// const alertType = 'success';
 
 	return (
 		<div className={`container ${styles.about}`}>
@@ -40,8 +36,8 @@ export const About = ({showAlert, setAlert}: IAbout) => {
 			/>
 
 			<h3>BsAlert</h3>
-			<button type="button" className={`btn btn-info ${styles.btn}`} onClick={btn1ClickHandler}>
-				Кнопка 1
+			<button type="button" className={`btn btn-info ${styles.btn}`} onClick={alertClickHandler}>
+				Показать уведомление
 			</button>
 		</div>
 	);

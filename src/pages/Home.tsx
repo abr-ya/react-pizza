@@ -13,8 +13,8 @@ import {IHome, IProduct} from '../interfaces';
 import data from '../data';
 
 export const Home = ({
-	setSort, setSize, addToCart, delFromCart,
-	products, sort, size, cart,
+	setSort, setSize, addToCart, setAlert,
+	products, sort, size,
 }: IHome) => {
 	const filteredProducts: IProduct[] = (size && size !== 'all') ? products
 		.filter(item => (item.category.includes(size))) : products;
@@ -65,7 +65,7 @@ export const Home = ({
 			<Banner />{/* fluid */}
 			<Sales sales={data.sales} />{/* container */}
 			<Filter size={size} sort={sort} handlers={filterHandlers} count={sortedProducts.length} />{/* container */}
-			<Products data={sortedProducts} handleAddToCart={handleAddToCart} />{/* container */}
+			<Products data={sortedProducts} handleAddToCart={handleAddToCart} setAlert={setAlert} />{/* container */}
 			<Delivery />{/* fluid */}
 			<Work />{/* container */}
 			<Inst />{/* fluid */}

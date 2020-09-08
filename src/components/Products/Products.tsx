@@ -3,10 +3,10 @@ import {IProducts} from '../../interfaces';
 import Pizza from '../Pizza/Pizza';
 //import styles from './products.module.scss';
 
-const Products = ({data, handleAddToCart}: IProducts) => {
+const Products = ({data, handleAddToCart, setAlert}: IProducts) => {
 	const productsHtml = data.map(item => (
 		<div className='col-lg-3 col-md-4 col-sm-6 col-xs-12' key={item.id}>
-			<Pizza data={item} handleAddToCart={handleAddToCart} />
+			<Pizza data={item} handleAddToCart={handleAddToCart} setAlert={setAlert} />
 		</div>
 	));
 	//console.log('productsHtml', productsHtml);
