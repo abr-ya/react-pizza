@@ -1,3 +1,4 @@
-import axios from 'axios';
+import axios from "axios";
 
-export const requestProducts = () => axios.get('http://localhost:8000/products/');
+export const requestProducts = () =>
+  axios.get("http://localhost:8000/products/");
