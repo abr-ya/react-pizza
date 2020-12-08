@@ -197,7 +197,10 @@ $pizzaPadding: 12px;
 		top: 14px + $pizzaPadding;
 		left: 14px + $pizzaPadding;
 	}
+}
 
+/* ExtraSmall */
+@media only screen and (max-width: 576px) {
 	.textBlock {
 		width: calc(100% - 100px);
 		padding: 10px;

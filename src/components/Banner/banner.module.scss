@@ -75,7 +75,7 @@
 
 	.banner h1 {
 		margin-top: 10px;
-		font-size: 64px;
+		font-size: 52px;
 	}
 
 	.banner {
@@ -86,22 +86,37 @@
 		top: -20px;
 		left: -30px;
 		height: calc(100% + 40px);
-	}	
+	}
+	
+	.banner p {
+		font-size: 18px;
+	}
 }
 
 /* Medium */
 @media only screen and (max-width: 896px) {
-	.bg {
-		background-image: none;
-	}
+	// .bg {
+	// 	background-image: none;
+	// }
 
 	.banner {
 		height: auto;
+	}
+
+	.banner p {
+		width: 290px;
+		margin-bottom: 10px;
+		font-size: 16px;
+		line-height: 1.25;
 	}
 }
 
 /* Small */
 @media only screen and (max-width: 768px) {
+	.bg {
+		background-image: none;
+	}
+
 	.imgPizza {
 		top: -20px;
 		left: 15px;

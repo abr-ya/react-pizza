@@ -36,8 +36,8 @@ const Delivery = () => {
 					</div>
 				</div>
 				<div className='row'>
-					{DeliveryData.map((item: IDeliveryCard) => (
-						<div className={`col-md-4 ${styles.wrapper}`} key={item.image}>
+					{DeliveryData.map((item: IDeliveryCard, index) => (
+						<div className={`col-lg-4 ${index === 0 ? 'col-md-12' : 'col-md-6'} ${styles.wrapper}`} key={item.image}>
 							<div className={styles.card}>
 								<div className={styles.left}>
 									<img src={`img/${item.image}`} alt="icon-order"/>
