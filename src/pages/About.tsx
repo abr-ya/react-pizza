@@ -7,7 +7,7 @@ interface IAbout {
   setAlert: (alert: IAlert) => void;
 }
 
-export const About = ({ setAlert }: IAbout) => {
+const About = ({ setAlert }: IAbout) => {
   const saveInputHandler = (id: string, quantity: number) => {
     console.log("saveInputHandler:", id, quantity);
   };
@@ -46,3 +46,5 @@ export const About = ({ setAlert }: IAbout) => {
     </div>
   );
 };
+
+export default About;

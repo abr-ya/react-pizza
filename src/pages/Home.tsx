@@ -12,7 +12,7 @@ import { IHome, IProduct } from "../interfaces";
 // демо-данные напрямую
 import data from "../data";
 
-export const Home = ({
+const Home = ({
   setSort,
   setSize,
   addToCart,
@@ -95,3 +95,5 @@ export const Home = ({
     </>
   );
 };
+
+export default Home;
